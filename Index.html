@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>La Minita</title>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="inner">
+                <nav class="menu">
+                    <a href="index.html">Catálogo</a></li>
+                    <a href="a.html">Prestar Equipo</a></li>
+                    <a href="#">Regresar Equipo</a></li>
+                    <a href="#">Informes</a></li>
+                    <a href="#">Registrar Usuario</a></li>
+                    <a href="#">Registrar Trabajador</a></li>
+                </nav>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- Search -->
+        <section class="search">
+            <form class="buscador">
+                <input class="textoBuscador" type="text" name="query" id="query" placeholder="Busca un equipo" />
+                <input class="botonBuscador" type="button" value="Buscar">
+            </form>
+        </section>
+
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th>Estado</th>
+                        <th>Ubicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Excavator</td>
+                        <td>Operational</td>
+                        <td>SiteA</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pallas</td>
+                        <td>Disponible</td>
+                        <td>SiteB</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>DrillRig</td>
+                        <td>Prestado</td>
+                        <td>SiteB</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Loader</td>
+                        <td>Operational</td>
+                        <td>SiteA</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Bulldozer</td>
+                        <td>Operational</td>
+                        <td>SiteC</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>WaterTruck</td>
+                        <td>Idle</td>
+                        <td>SiteC</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Grader</td>
+                        <td>Operational</td>
+                        <td>SiteA</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>RockBreaker</td>
+                        <td>Broken</td>
+                        <td>SiteB</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>ArticulatedTruck</td>
+                        <td>Operational</td>
+                        <td>SiteB</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>ScissorLift</td>
+                        <td>Maintenance</td>
+                        <td>SiteC</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>SkidSteerLoader</td>
+                        <td>Idle</td>
+                        <td>SiteC</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>BackhoeLoader</td>
+                        <td>Idle</td>
+                        <td>SiteH</td>
+                    </tr>
+                </tbody>
+            </table>
+            <input class="botonCrearEquipo" type="button" value="Crear Equipo">     
+        </section>
+        <section class="paginas">
+            <input type="button" value="<">
+            <p>1/1</p>
+            <input type="button" value=">">
+        </section>
+    </main>
+
+</body>
+</html>

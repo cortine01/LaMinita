@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestar Equipo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px 0;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .sidebar a:hover {
+            background-color: #e9ecef;
+            padding-left: 10px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .main-content h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .form-group table, .form-group th, .form-group td {
+            border: 1px solid #ccc;
+        }
+        .form-group th, .form-group td {
+            padding: 10px;
+            text-align: left;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .button-group button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button-group button.create {
+            background-color: #28a745;
+            color: white;
+        }
+        .button-group button.back {
+            background-color: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Catálogo</h2>
+        <a href="Index.html">Prestar Equipo</a>
+        <a href="#">Devoluciones</a>
+        <a href="#">Informes</a>
+        <a href="#">Registrar Usuario</a>
+        <a href="#">Registrar Trabajador</a>
+    </div>
+    <div class="main-content">
+        <h1>Prestar</h1>
+        <div class="form-group">
+            <label for="equipos">Equipos disponibles</label>
+            <input type="text" id="search-equipo" placeholder="Busca un equipo">
+            <select id="equipos">
+                <option>Equipo1</option>
+                <option>Equipo2</option>
+                <option>Equipo3</option>
+                <option>Equipo4</option>
+                <option>Equipo5</option>
+                <option>Equipo6</option>
+                <option>Equipo7</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="fecha">Fecha de Entrega</label>
+            <input type="date" id="fecha">
+            <button id="clear-date">Borrar</button>
+        </div>
+        <div class="form-group">
+            <label for="trabajador">Trabajador</label>
+            <input type="text" id="search-trabajador" placeholder="Busca un Trabajador">
+            <select id="trabajador">
+                <option>Bryan</option>
+            </select>
+            <button id="register-trabajador">Registrar Trabajador</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cargo</th>
+                        <th>Correo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bryan Cortine</td>
+                        <td>lorem</td>
+                        <td>qewrqwer@alskdjf.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="button-group">
+            <button class="create">Crear Prestamo</button>
+            <button class="back">Regresar</button>
+        </div>
+    </div>
+</body>
+</html>

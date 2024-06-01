@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 200px;
+    height: 93.5vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.sidebar a {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.sidebar a:hover{
+    background-color: #e9ecef;
+    padding-left: 10px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.main-content .search .buscador .textoBuscador{
+    width: 60vw;
+    height: 37px;
+    border: gray 3px solid;
+    border-radius: 15px;
+    margin-right: 20px;
+    padding-left: 20px;
+    font-size: 17px;
+    color: #333;
+}
+
+.main-content .search .buscador .botonBuscador{
+    width: 150px;
+    height: 43px;
+    border: gray 3px solid;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: white;
+    color: #333;
+}
+
+.main-content .search .buscador .botonBuscador:hover{
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+
+.main-content .search .buscador .botonBuscador:active{
+    background-color: whitesmoke;
+    color: #333;
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+table {
+    margin-top: 20px;
+    width: 75%;
+    border-collapse: collapse;
+}
+
+table thead {
+    background-color: whitesmoke;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+.botonCrearEquipo {
+    width: 150px;
+    height: 43px;
+    border: gray 3px solid;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: white;
+    color: #333;
+    align-self: flex-end;
+}
+
+.botonCrearEquipo:hover {
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+
+.botonCrearEquipo:active{
+    background-color: whitesmoke;
+    color: #333;
+}
+
+.paginas{
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.paginas input {
+    align-self: center;
+}
