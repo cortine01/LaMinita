@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>La Minita</title>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="inner">
+                <nav class="menu">
+                    <a href="index.html">Catálogo</a></li>
+                    <a href="prestado.html">Prestar Equipo</a></li>
+                    <a href="#">Regresar Equipo</a></li>
+                    <a href="#">Informes</a></li>
+                    <a href="#">Registrar Usuario</a></li>
+                    <a href="#">Registrar Trabajador</a></li>
+                </nav>
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <section class="titulo">
+            <h1>
+                Prestar
+            </h1>
+        </section>
+
+        <section class="equiposDisponibles">
+            <div class="equiposDisponibles-titulo">
+                <h2>
+                    Equipos Disponibles
+                </h2>
+            </div>
+            <div class="ctn-Buscador">
+                <div class="equiposDisponibles-buscador">
+                    <input type="text" name="equiposDisponibles" id="equiposDisponibles">
+                </div>
+                <select multiple id="cajaBuscador">
+                    <option value="Excavator">Excavator</option>
+                    <option value="Pallas">Pallas</option>
+                    <option value="DrillRig">DrillRig</option>
+                    <option value="Loader">Loader</option>
+                    <option value="Bulldozer">Bulldozer</option>
+                    <option value="WaterTruck">WaterTruck</option>
+                    <option value="Grader">Grader</option>
+                    <option value="RockBreaker">RockBreaker</option>
+                    <option value="ArticulatedTruck">ArticulatedTruck</option>
+                </select>
+                <div class="equiposDisponibles-ctnInputRegistrar">
+                    <input type="button" value="Registrar">
+                </div>
+                <div class="equiposDisponibles-ctnInputFechaEntrega">
+                    <input type="date" name="fechaEntrega" id="fechaEntrega">
+                </div>
+                <select multiple id="cajaBuscador">
+                    <option value="Pallas">Pallas</option>
+                    <option value="DrillRig">DrillRig</option>
+                    <option value="Loader">Loader</option>
+                </select>
+                <div class="equiposDisponibles-ctnInputBorrar">
+                    <input type="button" value="Borrar">
+                </div>
+            </div>
+        </section>
+        
+        <section class="usuariosPrestar">
+            <div class="usuarioPrestar-titulo">
+                <h2>
+                    Trabajador
+                </h2>
+            </div>
+            <div class="ctn-Buscador">
+                <div class="usuarioPrestar-buscador">
+                    <input type="text" name="usuarioPrestar" id="usuarioPrestar">
+                </div>
+                <select multiple id="cajaBuscador">
+                    <option value="Excavator">Excavator</option>
+                    <option value="Pallas">Pallas</option>
+                    <option value="DrillRig">DrillRig</option>
+                    <option value="Loader">Loader</option>
+                    <option value="Bulldozer">Bulldozer</option>
+                    <option value="WaterTruck">WaterTruck</option>
+                    <option value="Grader">Grader</option>
+                    <option value="RockBreaker">RockBreaker</option>
+                    <option value="ArticulatedTruck">ArticulatedTruck</option>
+                </select>
+                <div class="usuarioPrestar-ctnInputRegistrarTrabajador">
+                    <input type="button" value="Registrar Trabajador">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cargo</th>
+                            <th>Correo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bryan</td>
+                            <td>loram</td>
+                            <td>qewrqwer@alsdkfj.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="crearPrestamos">
+            <input type="button" value="Crear Prestamo">
+            <input type="button" value="Regresar">
+        </section>
+    </main>
+
+</body>
+</html>
