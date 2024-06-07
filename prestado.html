@@ -39,8 +39,9 @@
                 <div class="equiposDisponibles-buscador">
                     <input type="text" name="equiposDisponibles" id="equiposDisponibles">
                 </div>
-                <select multiple id="cajaBuscador">
+                <select multiple size="5" id="cajaBuscador">
                     <option value="Excavator">Excavator</option>
+                    <option value="Pallas">Pallas</option>
                     <option value="Pallas">Pallas</option>
                     <option value="DrillRig">DrillRig</option>
                     <option value="Loader">Loader</option>
@@ -51,47 +52,46 @@
                     <option value="ArticulatedTruck">ArticulatedTruck</option>
                 </select>
                 <div class="equiposDisponibles-ctnInputRegistrar">
-                    <input type="button" value="Registrar">
+                    <input type="button" value="Registrar" id="btnRegistrarDisponble">
+                </div>
+
+                <select multiple id="cajaPrestar">
+                </select>
+
+                <div class="equiposDisponibles-ctnInputBorrar">
+                    <input type="button" value="Borrar" id="btnBorrarDisponble">
                 </div>
                 <div class="equiposDisponibles-ctnInputFechaEntrega">
                     <input type="date" name="fechaEntrega" id="fechaEntrega">
                 </div>
-                <select multiple id="cajaBuscador">
-                    <option value="Pallas">Pallas</option>
-                    <option value="DrillRig">DrillRig</option>
-                    <option value="Loader">Loader</option>
-                </select>
-                <div class="equiposDisponibles-ctnInputBorrar">
-                    <input type="button" value="Borrar">
-                </div>
             </div>
         </section>
         
-        <section class="usuariosPrestar">
-            <div class="usuarioPrestar-titulo">
+        <section class="trabajadorPrestar">
+            <div class="trabajadorPrestar-titulo">
                 <h2>
                     Trabajador
                 </h2>
             </div>
             <div class="ctn-Buscador">
-                <div class="usuarioPrestar-buscador">
-                    <input type="text" name="usuarioPrestar" id="usuarioPrestar">
+                <div class="trabajadorPrestar-buscador">
+                    <input type="text" name="trabajadorPrestar" id="trabajadorPrestar">
                 </div>
-                <select multiple id="cajaBuscador">
-                    <option value="Excavator">Excavator</option>
-                    <option value="Pallas">Pallas</option>
-                    <option value="DrillRig">DrillRig</option>
-                    <option value="Loader">Loader</option>
-                    <option value="Bulldozer">Bulldozer</option>
-                    <option value="WaterTruck">WaterTruck</option>
-                    <option value="Grader">Grader</option>
-                    <option value="RockBreaker">RockBreaker</option>
-                    <option value="ArticulatedTruck">ArticulatedTruck</option>
+                <select size="5" id="cajaTrabajador">
+                    <option value="John Doe">John Doe</option>
+                    <option value="Jane Smith">Jane Smith</option>
+                    <option value="Robert Johnson">Robert Johnson</option>
+                    <option value="Emily Davis">Emily Davis</option>
+                    <option value="Michael Brown">Michael Brown</option>
+                    <option value="Sarah Wilson">Sarah Wilson</option>
+                    <option value="David Garcia">David Garcia</option>
+                    <option value="Laura Martinez">Laura Martinez</option>
+                    <option value="James Rodriguez">James Rodriguez</option>
                 </select>
-                <div class="usuarioPrestar-ctnInputRegistrarTrabajador">
+                <div class="trabajadorPrestar-ctnInputRegistrarTrabajador">
                     <input type="button" value="Registrar Trabajador">
                 </div>
-                <table>
+                <table id="tablaPrestarTrabajador">
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -115,6 +115,6 @@
             <input type="button" value="Regresar">
         </section>
     </main>
-
+<script src="funtion/main.js"></script>
 </body>
 </html>
