@@ -138,6 +138,11 @@ td {
     text-align: left;
 }
 
+
+
+
+
+
 .botonCrearEquipo {
     width: 150px;
     height: 43px;
@@ -220,7 +225,7 @@ td {
     align-items: center;
     text-decoration: none;
     box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
-        -10px -10px 10px -1px #D7DBDD;
+        -10px -10px 10px -1px #BFC9CA;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-property: box-shadow, transform;
@@ -337,7 +342,6 @@ td {
 
 .TablaTrabajadorPrestamo table {
     padding: 20px;
-    margin-left: 150px;
 }
 .TablaTrabajadorPrestamo table thead {   
     background-color:  #85929E;
@@ -345,6 +349,10 @@ td {
 
 .TablaTrabajadorPrestamo table tbody {   
     background-color:  #85929E;
+}
+
+.trabajadorPrestar-buscador {
+    display: flex;
 }
 
 .trabajadorPrestar-buscador input {
@@ -368,13 +376,10 @@ td {
 }
 
 #BotonRegistroWorker {
-    margin-top: 15px;
     width: 180px;
+    height: 45px;
 }
 
 .BotonesPrestamos {
-    position: relative;
-    left: 150px;
-    top: 40px;
     margin-top: 20px;
 }
