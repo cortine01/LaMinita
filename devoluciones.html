@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>La Minita</title>
+    <script src="https://kit.fontawesome.com/badd522a95.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="inner">
+            <nav class="menu">
+                <img src="src/MinitaLogo.png" id="MinitaLogo" alt="Logo">
+                <a href="index.html"> <i class="fa-solid fa-book"></i> Catálogo</a>
+                <a href="prestado.html"> <i class="fa-solid fa-toolbox"></i> Prestamos</a>
+                <a href="Devoluciones.html"> <i class="fa-solid fa-backward"></i> Devoluciones</a>
+                <a href="#"> <i class="fa-solid fa-file-lines"></i> Informes</a>
+                <a href="#"> <i class="fa-solid fa-id-card"></i> Registrar Usuario</a>
+                <a href="#"> <i class="fa-solid fa-id-card"></i> Registrar Trabajador</a>
+            </nav>
+        </div>
+
+    </div>
+
+    <main class="main-content">
+
+
+        <section class="Devoluciones">
+            <div class="Devoluciones-titulo">
+                <h2>
+                    DEVOLUCIONES
+                </h2>
+                <h2>
+                    Trabajador
+                </h2>
+            </div>
+
+
+            <style>
+                .Buscador-containes {
+                    width: 400px;
+                    padding: 20px;
+                    display: block;
+                    justify-content: space-between;
+                    height: 300px;
+                    background-color: grey;
+                    margin-bottom: 20px;
+                    border-radius: 20px;
+                }
+
+                #devoluciones {
+                    width: 70%;
+                    padding: 10px;
+                    font-size: 16px;
+                    border: 1px solid #030303;
+                    border-radius: 20px;
+                    margin-right: 20px;
+                    box-sizing: border-box;
+                    background-color: #ffffff;
+                    margin-bottom: 10px;
+                    
+                }
+
+                #cajaBuscador {
+                    width: 50%;
+                    padding: 10px;
+                    font-size: 16px;
+                    border: 1px solid #34495E;
+                    border-radius: 12px;
+                    box-sizing: border-box;
+                    background-color: #ffffff;
+                    
+                }
+
+                #cajaBuscador option {
+                    padding: 2%;
+                }
+            </style>
+
+
+            <title>Buscador de Nombres</title>
+
+            <div class="Buscador-containes">
+                <input type="text" name="devoluciones" id="devoluciones" placeholder="Buscar Nombre..">
+                <div class="lista nombres">
+                    <select multiple size="4" id="cajaBuscador">
+                        <option value="nombre1">Bryan</option>
+                        <option value="nombre2">anny</option>
+                        <option value="nombre3">jhice</option>
+                        <option value="nombre4">alecis</option>
+                        <option value="nombre5"></option>
+                        <option value="nombre6"></option>
+                        <option value="nombre7"></option>
+                        <option value="nombre8"></option>
+                        <option value="nombre9"></option>
+                        <option value="nombre10"></option>
+                    </select>
+
+
+                    <div class="tablaTrabajador">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Cargo</th>
+                                    <th>Correo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bryan</td>
+                                    <td>ser</td>
+                                    <td>inge@unisimon.edu.co</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <!--PRESTAMOS-->
+            <section class="trabajadorPrestamo">
+                <div class="trabajadorPrestamo-titulo">
+                    <h2>
+                        Prestamos
+                    </h2>
+                </div>
+
+
+                <style>
+                    .Buscador-prestamos {
+                        width: 400px;
+                        padding: 20px;
+                        display: block;
+                        justify-content: space-between;
+                        height: 290px;
+                        background-color: grey;
+                        margin-bottom: 20px;
+                        border-radius: 20px;
+                    }
+
+                    #trabajadorPrestamo {
+                        width: 70%;
+                        padding: 10px;
+                        font-size: 16px;
+                        border: 1px solid #030303;
+                        border-radius: 20px;
+                        margin-right: 20px;
+                        box-sizing: border-box;
+                        background-color: #ffffff;
+                        margin-bottom: 10px;
+                        
+                    }
+
+                    #cajaTrabajador {
+                        width: 50%;
+                        padding: 10px;
+                        font-size: 16px;
+                        border: 1px solid #34495E;
+                        border-radius: 12px;
+                        box-sizing: border-box;
+                        background-color: #ffffff;
+                       
+                    }
+
+                    #cajaBuscador option {
+                        padding: 2%;
+                    }
+                </style>
+
+                <div class="Buscador-prestamos">
+                    <div class="trabajadorPrestamo-buscador">
+                        <input type="text" name="trabajadorPrestamo" id="trabajadorPrestamo"
+                            placeholder="Buscar Nombre..">
+                        <select size="5" id="cajaTrabajador">
+                            <option value="nombre1">Bryan</option>
+                            <option value="nombre2">anny</option>
+                            <option value="nombre3">jhice</option>
+                            <option value="nombre4">alecis</option>
+                            <option value="nombre5"></option>
+                            <option value="nombre6"></option>
+                            <option value="nombre7"></option>
+                            <option value="nombre8"></option>
+                            <option value="nombre9"></option>
+                            <option value="nombre10"></option>
+
+                        </select>
+
+
+                        <!-- <input class="containerBtn" type="button" value="Registrar Trabajador">
+                         <input class="BtncrearPrestamos" type="button" value="Crear Prestamo"> -->
+
+
+                        <style>
+                            .tablaPrestamoTrabajador {
+                                width: 50%;
+                                border-collapse: collapse;
+                                margin: 10px 0;
+                                font-size: 18px;
+                                text-align: left;
+                                box-shadow: 0 2px 3px rgba(84, 138, 66, 0.1);
+                            }
+
+                            th,
+                            td {
+                                padding: 12px 15px;
+                                border: 1px solid #ddd;
+                                background-color: #34495E;
+                                color: #ffffff;
+                            }
+                        </style>
+                        <title>Tabla Estilizada2</title>
+                        <div>
+
+                            <section>
+                                <table class="tablaPrestamoTrabajador">
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" value="Préstamo"></td>
+                                            <td><input type="text" value="Tipo de aparato prestado"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!--BOTON-->
+                <style>
+                    .BtncrearPrestamos {
+                        border-collapse: collapse;
+                        margin-left: 250px;
+                        background-color: #34495E;
+                        color: #ffffff;
+                    }
+                </style>
+
+                <input class="BtncrearPrestamos" type="button" value="Regresar">
+
+
+    </main>
+    <script src="funtion/main.js"></script>
+</body>
+
+</html>
