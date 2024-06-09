@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>La Minita</title>
+    <script src="https://kit.fontawesome.com/badd522a95.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="inner">
+            <nav class="menu">
+                <img src="src/MinitaLogo.png" id="MinitaLogo" alt="Logo">
+                <a href="index.html"> <i class="fa-solid fa-book"></i> Catálogo</a>
+                <a href="prestado.html"> <i class="fa-solid fa-toolbox"></i> Prestamos</a>
+                <a href="Devoluciones.html"> <i class="fa-solid fa-backward"></i> Devoluciones</a>
+                <a href="#"> <i class="fa-solid fa-file-lines"></i> Informes</a>
+                <a href="registrarUsuario.html"> <i class="fa-solid fa-id-card"></i> Registrar Usuario</a>
+                <a href="registrarTrabajador.html"> <i class="fa-solid fa-id-card"></i> Registrar Trabajador</a>
+
+            </nav>
+        </div>
+
+    </div>
+
+    <main class="main-content">
+
+
+        <section class="RegistrarTrabajador">
+            <div class="RegistrarTrabajador-titulo">
+                <h2>
+                    REGISTRAR TRABAJADOR
+                </h2>
+                <h2>
+                    Nombre
+                </h2>
+                <div class="Buscador-containes1">
+                    <input type="text" name="RegistrarTrabajador" id="RegistrarTrabajador"
+                        placeholder="Ingresa Nombre..">
+                </div>
+
+
+                <div>
+                    <h2>
+                        Apellido
+                    </h2>
+                    <div class="Buscador-containes2">
+                        <input type="text" name="RegistrarTrabajador" id="RegistrarTrabajador"
+                            placeholder="Ingresa Apellido..">
+                    </div>
+
+
+                    <div>
+                        <h2>
+                            Departamento
+                        </h2>
+                        <div class="Buscador-containes3">
+                            <input type="text" name="RegistrarTrabajador" id="RegistrarTrabajador"
+                                placeholder="Ingresa Departamento..">
+                        </div>
+
+
+                        <div>
+                            <h2>
+                                Cargo
+                            </h2>
+                            <div class="Buscador-containes4">
+                                <input type="text" name="RegistrarTrabajador" id="RegistrarTrabajador"
+                                    placeholder="Ingresa Cargo..">
+                            </div>
+
+
+
+
+
+
+
+                            <!--BOTONES-->
+
+                            <style>
+                                #RegistrarTrabajador {
+                                    width: 70%;
+                                    padding: 10px;
+                                    font-size: 16px;
+                                    border: 1px solid #030303;
+                                    border-radius: 20px;
+                                    margin-right: 20px;
+                                    box-sizing: border-box;
+                                    background-color: #ffffff;
+                                    margin-bottom: 10px;
+
+                                }
+
+                                .BtnRegistrarTrabajador {
+                                    margin-left: 250px;
+                                    background-color: #34495E;
+                                    color: #ffffff;
+                                    padding: 15px 30px;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    border-radius: 50px;
+                                    border: none;
+                                    cursor: pointer;
+                                    margin: 10px 15px;
+                                    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+                                    display: inline-block;
+                                }
+
+                                .BtnRegistrarTrabajador:hover {
+                                    background-color: #667070;
+                                    transform: scale(1.1);
+                                    box-shadow: 0 8px 16px;
+                                }
+                            </style>
+
+
+
+                            <input class="BtnRegistrarTrabajador" type="button" value="Crear">
+                            <input class="BtnRegistrarTrabajador" type="button" value="Regresar">
+                            <input class="BtnRegistrarTrabajador" type="button" value="Prestar Equipo">
+
+
+    </main>
+    <script src="funtion/main.js"></script>
+</body>
+
+</html>

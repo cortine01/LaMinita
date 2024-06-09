@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>La Minita</title>
     <script src="https://kit.fontawesome.com/badd522a95.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <div class="sidebar">
@@ -17,11 +19,12 @@
                 <a href="prestado.html"> <i class="fa-solid fa-toolbox"></i> Prestamos</a>
                 <a href="devoluciones.html"> <i class="fa-solid fa-backward"></i> Devoluciones</a>
                 <a href="#"> <i class="fa-solid fa-file-lines"></i> Informes</a>
-                <a href="#"> <i class="fa-solid fa-id-card"></i> Registrar Usuario</a>
-                <a href="#"> <i class="fa-solid fa-id-card"></i> Registrar Trabajador</a>
+                <a href="registrarUsuario.html"> <i class="fa-solid fa-id-card"></i> Registrar Usuario</a>
+                <a href="registrarTrabajador.html"> <i class="fa-solid fa-id-card"></i> Registrar Trabajador</a>
+
             </nav>
         </div>
-        
+
     </div>
 
     <main class="main-content">
@@ -43,24 +46,24 @@
                     <input type="text" name="equiposDisponibles" id="equiposDisponibles">
                 </div>
                 <select multiple size="5" id="cajaBuscador">
-                    
-                </select>
-                
-                    <input class="containerBtn" type="button" value="Añadir" id="btnRegistrarDisponble">
-                </div>
 
-                <select multiple id="cajaPrestar">
                 </select>
 
-                <input class="containerBtn" type="button" value="Borrar" id="btnBorrarDisponble">
-    
-                <div class="equiposDisponibles-ctnInputFechaEntrega">
-                    <input type="date" name="fechaEntrega" id="fechaEntrega">
-                </div>
-                
+                <input class="containerBtn" type="button" value="Añadir" id="btnRegistrarDisponble">
+            </div>
+
+            <select multiple id="cajaPrestar">
+            </select>
+
+            <input class="containerBtn" type="button" value="Borrar" id="btnBorrarDisponble">
+
+            <div class="equiposDisponibles-ctnInputFechaEntrega">
+                <input type="date" name="fechaEntrega" id="fechaEntrega">
+            </div>
+
             </div>
         </section>
-        
+
         <section class="trabajadorPrestar">
             <div class="trabajadorPrestar-titulo">
                 <h2>
@@ -72,11 +75,11 @@
                     <input type="text" name="trabajadorPrestar" id="trabajadorPrestar">
                 </div>
                 <select size="5" id="cajaTrabajador">
-                    
+
                 </select>
-                
-                <input  class="containerBtn" type="button" value="Registrar Trabajador">
-                
+
+                <input class="containerBtn" type="button" value="Registrar Trabajador">
+
                 <table id="tablaPrestarTrabajador">
                     <thead>
                         <tr>
@@ -101,9 +104,10 @@
         <p id="parrafoPrueba"></p>
         <input class="BtncrearPrestamos" type="button" value="Crear Prestamo" id="btnCrearPrestamo">
         <input class="BtncrearPrestamos" type="button" value="Regresar">
-        
+
 
     </main>
-<script src="funtion/main.js"></script>
+    <script src="funtion/main.js"></script>
 </body>
+
 </html>
