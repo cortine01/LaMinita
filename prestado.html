@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>La Minita</title>
+    <link rel="icon" href="src/MinitaLogo.png" type="image/png">
     <script src="https://kit.fontawesome.com/badd522a95.js" crossorigin="anonymous"></script>
 </head>
 
@@ -34,53 +35,63 @@
             </h1>
         </section>-->
 
-        <section class="equiposDisponibles">
-            <div class="equiposDisponibles-titulo">
-                <h2>
-                    Equipos Disponibles
-                </h2>
-            </div>
-            <div class="ctn-Buscador">
-                <div class="equiposDisponibles-buscador">
-                    <input type="text" name="equiposDisponibles" id="equiposDisponibles">
+        <div class="equiposDisponibles-titulo">
+            <h2>
+                Equipos Disponibles
+            </h2>
+        </div>
+        <div class="containerAñadirBorrar">
+
+            <section class="equiposDisponibles">
+                <div class="ctn-Buscador">
+                    <div class="equiposDisponibles-buscador">
+                        <input type="text" name="equiposDisponibles" id="equiposDisponibles"
+                            placeholder="Buscar Equipo">
+                    </div>
+                    <select multiple size="5" id="cajaBuscador">
+                        <option value="Excavator">Excavator</option>
+                        <option value="Pallas">Pallas</option>
+                        <option value="Pallas">Pallas</option>
+                        <option value="DrillRig">DrillRig</option>
+                        <option value="Loader">Loader</option>
+                        <option value="Bulldozer">Bulldozer</option>
+                        <option value="WaterTruck">WaterTruck</option>
+                        <option value="Grader">Grader</option>
+                        <option value="RockBreaker">RockBreaker</option>
+                        <option value="ArticulatedTruck">ArticulatedTruck</option>
+                    </select>
+
+                    <input class="containerBtn" type="button" value="Añadir" id="btnRegistrarDisponble">
                 </div>
-                <select multiple size="5" id="cajaBuscador">
-                    <option value="Excavator">Excavator</option>
-                    <option value="Pallas">Pallas</option>
-                    <option value="Pallas">Pallas</option>
-                    <option value="DrillRig">DrillRig</option>
-                    <option value="Loader">Loader</option>
-                    <option value="Bulldozer">Bulldozer</option>
-                    <option value="WaterTruck">WaterTruck</option>
-                    <option value="Grader">Grader</option>
-                    <option value="RockBreaker">RockBreaker</option>
-                    <option value="ArticulatedTruck">ArticulatedTruck</option>
+            </section>
+
+            <div class="container2">
+                <p> Borrar Equipos Seleccionados </p>
+                <select multiple id="cajaPrestar">
                 </select>
 
-                <input class="containerBtn" type="button" value="Añadir" id="btnRegistrarDisponble">
-            </div>
-
-            <select multiple id="cajaPrestar">
-            </select>
-
-            <input class="containerBtn" type="button" value="Borrar" id="btnBorrarDisponble">
-
-            <div class="equiposDisponibles-ctnInputFechaEntrega">
-                <input type="date" name="fechaEntrega" id="fechaEntrega">
-            </div>
+                <input class="containerBtn" type="button" value="Borrar" id="btnBorrarDisponble">
 
             </div>
-        </section>
+        </div>
+        <div class="equiposDisponibles-ctnInputFechaEntrega">
+            <p> Seleccionar Fecha de entrega: </p>
+            <input type="date" name="fechaEntrega" id="fechaEntrega">
+        </div>
 
-        <section class="trabajadorPrestar">
-            <div class="trabajadorPrestar-titulo">
-                <h2>
-                    Trabajador
-                </h2>
-            </div>
-            <div class="ctn-Buscador">
+
+        <div class="trabajadorPrestar-titulo">
+            <h2>
+                Trabajador
+            </h2>
+        </div>
+
+        <div class="containerTrabajadorPrestamo">
+
+            <section class="trabajadorPrestar">
+
                 <div class="trabajadorPrestar-buscador">
-                    <input type="text" name="trabajadorPrestar" id="trabajadorPrestar">
+                    <input type="text" name="trabajadorPrestar" id="trabajadorPrestar" placeholder="Buscar Trabajador">
                 </div>
                 <select size="5" id="cajaTrabajador">
                     <option value="John Doe">John Doe</option>
@@ -93,9 +104,10 @@
                     <option value="Laura Martinez">Laura Martinez</option>
                     <option value="James Rodriguez">James Rodriguez</option>
                 </select>
+                <input class="containerBtn" type="button" value="Registrar Trabajador" id="BotonRegistroWorker">
+            </section>
 
-                <input class="containerBtn" type="button" value="Registrar Trabajador">
-
+            <div class="TablaTrabajadorPrestamo">
                 <table id="tablaPrestarTrabajador">
                     <thead>
                         <tr>
@@ -112,13 +124,12 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="BotonesPrestamos">
+                    <input class="BtncrearPrestamos" type="button" value="Crear Prestamo">
+                    <input class="BtncrearPrestamos" type="button" value="Regresar">
+                </div>
             </div>
-        </section>
-
-
-        <input class="BtncrearPrestamos" type="button" value="Crear Prestamo">
-        <input class="BtncrearPrestamos" type="button" value="Regresar">
-
+        </div>
 
     </main>
     <script src="funtion/main.js"></script>
