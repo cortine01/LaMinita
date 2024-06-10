@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>La Minita</title>
+    <link rel="icon" href="src/MinitaLogo.png" type="image/png">
     <script src="https://kit.fontawesome.com/badd522a95.js" crossorigin="anonymous"></script>
 </head>
 
@@ -32,64 +33,46 @@
     <main class="main-content">
 
 
-        <section class="RegistrarTrabajador">
-            <div class="RegistrarTrabajador-titulo">
-                <h2>
-                    REGISTRAR TRABAJADOR
-                </h2>
-                <h2>
-                    Nombre
-                </h2>
-                <div class="Buscador-containes1">
-                    <input type="text" name="RegistrarTrabajador" id="RegistrarTrabajador"
-                        placeholder="Ingresa Nombre..">
-                </div>
+        <div class="containerRegistrarTrabajador">
 
+            <div class="form-content">
+                <h1 id="title">
+                    Registrar Trabajador
+                </h1>
 
-                <div>
-                    <h2>
-                        Apellido
-                    </h2>
-                    <div class="Buscador-containes2">
-                        <input type="text" name="RegistrarTrabajador" id="RegistrarTrabajador"
-                            placeholder="Ingresa Apellido..">
-                    </div>
-
-
-                    <div>
-                        <h2>
-                            Departamento
-                        </h2>
-                        <div class="Buscador-containes3">
-                            <input type="text" name="RegistrarTrabajador" id="RegistrarTrabajador"
-                                placeholder="Ingresa Departamento..">
+                <form id="form">
+                    <div class="textContainer">
+                        <div class="input-field">
+                            <label id="icon" for="nombre"><i class="fa-regular fa-user"></i></i></label>
+                            <input type="text" id="nombre" placeholder="Nombre">
                         </div>
 
+                        <div class="input-field">
+                            <label id="icon" for="apellido"><i class="fa-regular fa-user"></i></label>
+                            <input type="text" id="apellido" placeholder="Apellido">
+                        </div>
 
-                        <div>
-                            <h2>
-                                Cargo
-                            </h2>
-                            <div class="Buscador-containes4">
-                                <input type="text" name="RegistrarTrabajador" id="RegistrarTrabajador"
-                                    placeholder="Ingresa Cargo..">
-                            </div>
+                        <div class="input-field">
+                            <label id="icon" for="departamento"><i class="fa-solid fa-address-card"></i></label>
+                            <input type="text" id="departamento" placeholder="Departamento">
+                        </div>
 
+                        <div class="input-field">
+                            <label id="icon" for="cargo"><i class="fa-solid fa-briefcase"></i></label>
+                            <input type="text" id="cargo" placeholder="Cargo">
+                        </div>
 
-
-
-
-
-                            <!--BOTONES-->
-
-
-                            <div class="button-container">
-                                <input class="BtnRegistrarTrabajador" type="button" value="Crear">
-                                <input class="BtnRegistrarTrabajador" type="button" value="Regresar">
-                                <input class="BtnRegistrarTrabajador" type="button" value="Prestar Equipo">
-                            </div>
-
-
+                        <div class="BotonesRegistrarTrabajador">
+                            <input class="BotonesRegistrarT" type="button" value="Crear">
+                            <input class="BotonesRegistrarT" type="button" value="Regresar">
+                           
+                        </div>
+                            
+                        <input class="BotonesPrestarEquipoEnRegistrar" type="button" value="Prestar Equipo">
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
     <script src="funtion/main.js"></script>
 </body>
