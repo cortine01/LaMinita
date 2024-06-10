@@ -40,55 +40,12 @@
                 </h2>
             </div>
 
-
-            <style>
-                .Buscador-containes {
-                    width: 400px;
-                    padding: 20px;
-                    display: block;
-                    justify-content: space-between;
-                    height: 300px;
-                    background-color: grey;
-                    margin-bottom: 20px;
-                    border-radius: 20px;
-                }
-
-                #devoluciones {
-                    width: 70%;
-                    padding: 10px;
-                    font-size: 16px;
-                    border: 1px solid #030303;
-                    border-radius: 20px;
-                    margin-right: 20px;
-                    box-sizing: border-box;
-                    background-color: #ffffff;
-                    margin-bottom: 10px;
-
-                }
-
-                #cajaBuscador {
-                    width: 50%;
-                    padding: 10px;
-                    font-size: 16px;
-                    border: 1px solid #34495E;
-                    border-radius: 12px;
-                    box-sizing: border-box;
-                    background-color: #ffffff;
-
-                }
-
-                #cajaBuscador option {
-                    padding: 2%;
-                }
-            </style>
-
-
             <title>Buscador de Nombres</title>
 
             <div class="Buscador-containes">
-                <input type="text" name="devoluciones" id="devoluciones" placeholder="Buscar Nombre..">
-                <div class="lista nombres">
-                    <select multiple size="4" id="cajaBuscador">
+                <input type="text" class="input-devoluciones"  name="devoluciones" id="devoluciones" placeholder="Buscar Nombre..">
+                <div class="listanombres">
+                    <select multiple size="4" id="cajaBuscador" class="cajaBuscadordevoluciones">
                         <option value="nombre1">Bryan</option>
                         <option value="nombre2">anny</option>
                         <option value="nombre3">jhice</option>
@@ -125,9 +82,6 @@
                 </div>
             </div>
 
-
-
-
             <!--PRESTAMOS-->
             <section class="trabajadorPrestamo">
                 <div class="trabajadorPrestamo-titulo">
@@ -136,53 +90,11 @@
                     </h2>
                 </div>
 
-
-                <style>
-                    .Buscador-prestamos {
-                        width: 400px;
-                        padding: 20px;
-                        display: block;
-                        justify-content: space-between;
-                        height: 290px;
-                        background-color: grey;
-                        margin-bottom: 20px;
-                        border-radius: 20px;
-                    }
-
-                    #trabajadorPrestamo {
-                        width: 70%;
-                        padding: 10px;
-                        font-size: 16px;
-                        border: 1px solid #030303;
-                        border-radius: 20px;
-                        margin-right: 20px;
-                        box-sizing: border-box;
-                        background-color: #ffffff;
-                        margin-bottom: 10px;
-
-                    }
-
-                    #cajaTrabajador {
-                        width: 50%;
-                        padding: 10px;
-                        font-size: 16px;
-                        border: 1px solid #34495E;
-                        border-radius: 12px;
-                        box-sizing: border-box;
-                        background-color: #ffffff;
-
-                    }
-
-                    #cajaBuscador option {
-                        padding: 2%;
-                    }
-                </style>
-
                 <div class="Buscador-prestamos">
                     <div class="trabajadorPrestamo-buscador">
-                        <input type="text" name="trabajadorPrestamo" id="trabajadorPrestamo"
+                        <input type="text" class="input-trabajador" name="trabajadorPrestamo" id="trabajadorPrestamo"
                             placeholder="Buscar Nombre..">
-                        <select size="5" id="cajaTrabajador">
+                        <select size="5" id="cajaTrabajador" class="cajaBuscadorTrabajador">
                             <option value="nombre1">Bryan</option>
                             <option value="nombre2">anny</option>
                             <option value="nombre3">jhice</option>
@@ -196,29 +108,9 @@
 
                         </select>
 
-
                         <!-- <input class="containerBtn" type="button" value="Registrar Trabajador">
                          <input class="BtncrearPrestamos" type="button" value="Crear Prestamo"> -->
 
-
-                        <style>
-                            .tablaPrestamoTrabajador {
-                                width: 50%;
-                                border-collapse: collapse;
-                                margin: 10px 0;
-                                font-size: 18px;
-                                text-align: left;
-                                box-shadow: 0 2px 3px rgba(84, 138, 66, 0.1);
-                            }
-
-                            th,
-                            td {
-                                padding: 12px 15px;
-                                border: 1px solid #ddd;
-                                background-color: #34495E;
-                                color: #ffffff;
-                            }
-                        </style>
                         <title>Tabla Estilizada2</title>
                         <div>
 
@@ -237,19 +129,9 @@
                     </div>
                 </div>
 
-
                 <!--BOTON-->
-                <style>
-                    .BtncrearPrestamos {
-                        border-collapse: collapse;
-                        margin-left: 250px;
-                        background-color: #34495E;
-                        color: #ffffff;
-                    }
-                </style>
 
-                <input class="BtncrearPrestamos" type="button" value="Regresar">
-
+                <input class="BtnDevolver" type="button" value="Devolver Equipo">
 
     </main>
     <script src="funtion/main.js"></script>
