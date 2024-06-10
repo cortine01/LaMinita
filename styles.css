@@ -250,7 +250,7 @@ td {
     background-color: #ABB2B9;
     border-radius: 40px;
     padding: 20px;
-    box-shadow: 2px 2px 5px #000; 
+    box-shadow: 2px 2px 5px #000;
     width: 350px;
     align-items: center;
 }
@@ -280,6 +280,7 @@ td {
     left: 130px;
     margin-top: 15px;
 }
+
 .containerAñadirBorrar {
     display: flex;
 }
@@ -288,24 +289,24 @@ td {
     background-color: #ABB2B9;
     border-radius: 40px;
     padding: 20px;
-    box-shadow: 2px 2px 5px #000; 
+    box-shadow: 2px 2px 5px #000;
     width: 350px;
     height: 210px;
     align-items: center;
     margin-left: 60px;
 }
 
- #cajaPrestar {
+#cajaPrestar {
     position: relative;
     left: 70px;
     width: 200px;
     height: 100px;
     border: #000 1px solid;
     font-size: 15px;
-    
+
 }
 
- #btnBorrarDisponble {
+#btnBorrarDisponble {
     position: relative;
     left: 200px;
     margin-top: 15px;
@@ -336,19 +337,20 @@ td {
     margin-left: 15px;
 }
 
-.containerTrabajadorPrestamo  {
+.containerTrabajadorPrestamo {
     display: flex;
 }
 
 .TablaTrabajadorPrestamo table {
     padding: 20px;
 }
-.TablaTrabajadorPrestamo table thead {   
-    background-color:  #85929E;
+
+.TablaTrabajadorPrestamo table thead {
+    background-color: #85929E;
 }
 
-.TablaTrabajadorPrestamo table tbody {   
-    background-color:  #85929E;
+.TablaTrabajadorPrestamo table tbody {
+    background-color: #85929E;
 }
 
 .trabajadorPrestar-buscador {
@@ -382,4 +384,330 @@ td {
 
 .BotonesPrestamos {
     margin-top: 20px;
+}
+
+
+
+
+
+/*registrar trabajador*/
+.RegistrarTrabajador {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.RegistrarTrabajador-titulo h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.Buscador-containes1,
+.Buscador-containes2,
+.Buscador-containes3,
+.Buscador-containes4 {
+    margin-bottom: 15px;
+}
+
+.Buscador-containes1 input,
+.Buscador-containes2 input,
+.Buscador-containes3 input,
+.Buscador-containes4 input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+#RegistrarTrabajador {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #030303;
+    border-radius: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/*botones*/
+.BtnRegistrarTrabajador {
+    background-color: #34495E;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 15px;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.BtnRegistrarTrabajador:hover {
+    background-color: #667070;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: -30px;
+}
+
+
+
+
+
+/*devoluciones*/
+.Buscador-containes {
+    width: 400px;
+    padding: 20px;
+    display: block;
+    justify-content: space-between;
+    height: 300px;
+    background-color: grey;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+#devoluciones {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #030303;
+    border-radius: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+
+}
+
+#cajaBuscador {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #34495E;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+
+}
+
+#cajaBuscador option {
+    padding: 2%;
+}
+
+/*buscadores prestamos*/
+.Buscador-prestamos {
+    width: 400px;
+    padding: 20px;
+    display: block;
+    justify-content: space-between;
+    height: 290px;
+    background-color: grey;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+#trabajadorPrestamo {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #030303;
+    border-radius: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+
+}
+
+#cajaTrabajador {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #34495E;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+
+}
+
+#cajaBuscador option {
+    padding: 2%;
+}
+
+/*botones*/
+.BtncrearPrestamos {
+    border-collapse: collapse;
+    margin-left: 250px;
+    background-color: #34495E;
+    color: #ffffff;
+}
+
+
+
+
+
+/*registrar usuario*/
+.registrarUsuario {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.RegistrarUsuario-titulo h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.Buscador-containes1,
+.Buscador-containes2,
+.Buscador-containes3,
+.Buscador-containes4,
+.Buscador-containes5 {
+    margin-bottom: 15px;
+}
+
+.Buscador-containes1 input,
+.Buscador-containes2 input,
+.Buscador-containes3 input,
+.Buscador-containes4 input,
+.Buscador-containes5 input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*botones*/
+#RegistrarTrabajador {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #030303;
+    border-radius: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+
+}
+
+.BtnRegistrarTrabajador {
+    background-color: #34495E;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin: 20px 15px 30px 15px;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.BtnRegistrarTrabajador:hover {
+    background-color: #667070;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px;
+}
+
+
+
+
+
+/*eliminar equipo*/
+.eliminarEquipo {
+    width: 500%;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 400px;
+    padding: 20px;
+    display: block;
+    justify-content: space-between;
+    height: 650px;
+    background-color: #ABB2B9;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.Buscador-containes {
+    width: 400px;
+    padding: 20px;
+    display: block;
+    justify-content: space-between;
+    height: 300px;
+    background-color: grey;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.buscadores {
+    width: 100%;
+    height: 10px;
+}
+
+.Buscador-containes3 {
+    width: 350px;
+    height: 150px;
+    /* Modifica la altura según tus necesidades */
+    border-radius: 0px;
+    margin-bottom: 20px;
+}
+
+.Buscador-containes3 textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-sizing: border-box;
+    resize: vertical;
+    /* Permite redimensionar verticalmente */
+}
+
+/*equipo*/
+.Equipo {
+    width: 500%;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 400px;
+    padding: 20px;
+    display: block;
+    justify-content: space-between;
+    height: 650px;
+    background-color: #ABB2B9;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.BtnEquipo {
+    background-color: #34495E;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin: 20px 15px 30px 15px;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.BtnEquipo:hover {
+    background-color: #667070;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px;
 }
