@@ -621,3 +621,88 @@ color: #000;
     background-color: whitesmoke;
     transform: scale(0.9);
 }
+
+
+/*eliminar equipo*/
+.eliminarEquipo {
+    width: 500%;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 400px;
+    padding: 20px;
+    display: block;
+    justify-content: space-between;
+    height: 650px;
+    background-color: #ABB2B9;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.Buscador-containes {
+    width: 400px;
+    padding: 20px;
+    display: block;
+    justify-content: space-between;
+    height: 300px;
+    background-color: grey;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.buscadores {
+    width: 100%;
+    height: 10px;
+}
+
+.Buscador-containes3 {
+    width: 350px;
+    height: 150px;
+    /* Modifica la altura según tus necesidades */
+    border-radius: 0px;
+    margin-bottom: 20px;
+}
+
+.Buscador-containes3 textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-sizing: border-box;
+    resize: vertical;
+    /* Permite redimensionar verticalmente */
+}
+
+/*equipo*/
+.Equipo {
+    width: 500%;
+    max-width: 5000px;
+    margin: 0 auto;
+    width: 380px;
+    padding: 20px;
+    display: block;
+    justify-content: space-between;
+    height: 650px;
+    background-color: #ABB2B9;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.BtnEquipo {
+    background-color: #34495E;
+    color: #ffffff;
+    padding: 18px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin: 20px 15px 30px 15px;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.BtnEquipo:hover {
+    background-color: #667070;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px;
+}
