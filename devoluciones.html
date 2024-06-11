@@ -35,51 +35,6 @@
                 <h2>
                     DEVOLUCIONES
                 </h2>
-                <h2>
-                    Trabajador
-                </h2>
-            </div>
-
-            <title>Buscador de Nombres</title>
-
-            <div class="Buscador-containes">
-                <input type="text" class="input-devoluciones"  name="devoluciones" id="devoluciones" placeholder="Buscar Nombre..">
-                <div class="listanombres">
-                    <select multiple size="4" id="cajaBuscador" class="cajaBuscadordevoluciones">
-                        <option value="nombre1">Bryan</option>
-                        <option value="nombre2">anny</option>
-                        <option value="nombre3">jhice</option>
-                        <option value="nombre4">alecis</option>
-                        <option value="nombre5"></option>
-                        <option value="nombre6"></option>
-                        <option value="nombre7"></option>
-                        <option value="nombre8"></option>
-                        <option value="nombre9"></option>
-                        <option value="nombre10"></option>
-                    </select>
-
-
-                    <div class="tablaTrabajador">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Cargo</th>
-                                    <th>Correo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Bryan</td>
-                                    <td>ser</td>
-                                    <td>inge@unisimon.edu.co</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-
-                </div>
             </div>
 
             <!--PRESTAMOS-->
@@ -92,49 +47,53 @@
 
                 <div class="Buscador-prestamos">
                     <div class="trabajadorPrestamo-buscador">
-                        <input type="text" class="input-trabajador" name="trabajadorPrestamo" id="trabajadorPrestamo"
-                            placeholder="Buscar Nombre..">
-                        <select size="5" id="cajaTrabajador" class="cajaBuscadorTrabajador">
-                            <option value="nombre1">Bryan</option>
-                            <option value="nombre2">anny</option>
-                            <option value="nombre3">jhice</option>
-                            <option value="nombre4">alecis</option>
-                            <option value="nombre5"></option>
-                            <option value="nombre6"></option>
-                            <option value="nombre7"></option>
-                            <option value="nombre8"></option>
-                            <option value="nombre9"></option>
-                            <option value="nombre10"></option>
+                        <input type="text" class="input-trabajador" name="trabajadorPrestamo" id="inputPrestamo"
+                            placeholder="Buscar Prestamo">
+                        <select size="5" id="cajaPrestamos" class="cajaBuscadorTrabajador">
 
                         </select>
 
                         <!-- <input class="containerBtn" type="button" value="Registrar Trabajador">
                          <input class="BtncrearPrestamos" type="button" value="Crear Prestamo"> -->
 
-                        <title>Tabla Estilizada2</title>
                         <div>
-
                             <section>
                                 <table class="tablaPrestamoTrabajador">
-                                    <tbody>
+                                    <thead>
                                         <tr>
-                                            <td><input type="text" value="Préstamo"></td>
-                                            <td><input type="text" value="Tipo de aparato prestado"></td>
+                                            <th>fecha del Prestamo</th>
+                                            <th>trabajador Solicitante</th>
+                                            <th>fecha estimada</th>
+                                            <th>equipos Prestados</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr id="ContenidoTabla">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </section>
                         </div>
+                    </div>
+                </div>
 
+                <div>
+                    <h2>Observaciones</h2>
+                    <div>
+                        <textarea id="InputObservaciones" placeholder="Ingresa las Observaciones.."></textarea>
                     </div>
                 </div>
 
                 <!--BOTON-->
 
-                <input class="BtnDevolver" type="button" value="Devolver Equipo">
+                <input class="BtnDevolver" type="button" value="Devolver Equipo" id="btnCrearDevolucion">
 
     </main>
-    <script src="funtion/main.js"></script>
+    <script src="funtion/devoluciones.js"></script>
 </body>
 
 </html>

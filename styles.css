@@ -113,7 +113,7 @@ body {
 
 table {
     margin-top: 20px;
-    width: 75%;
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -545,11 +545,11 @@ color: #000;
 }
 
 .Buscador-prestamos {
-    width: 400px;
+    width: 500px;
+    height: 100%;
     padding: 20px;
     display: block;
     justify-content: space-between;
-    height: 290px;
     background-color: grey;
     margin-bottom: 20px;
     border-radius: 20px;
