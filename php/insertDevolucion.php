@@ -1,21 +1,20 @@
 <?php
 include("conexion.php");
 
+$fechaDevolucion = $_POST['fechaDevolucion'];
+$observaciones = $_POST['observaciones'];
+$prestamoDevuelto = $_POST['prestamoDevuelto'];
 
-$insertar = "";
+$insertar = "CALL InsertarDevolucion('$fechaDevolucion', 'Bueno', '$observaciones', '$prestamoDevuelto');";
 
+echo $insertar;
 
-if (mysqli_multi_query($conex, $insertar)) {
-    do {
-        // Store first result set
-        if ($result = mysqli_store_result($conex)) {
-            mysqli_free_result($result);
-        }
-        // If there are more results, continue to the next query
-    } while (mysqli_next_result($conex));
-    echo "Prestamo Creado Correctamente";
+$resultado = mysqli_query($conex, $insertar);
+
+if ($resultado) {
+    echo "Datos Enviados Correctamente";
 } else {
-    echo "Error al Crear el Prestamo: " . mysqli_error($conex);
+    echo "Error al Enviar los Datos";
 }
 
 mysqli_close($conex);

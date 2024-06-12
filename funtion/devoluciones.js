@@ -50,6 +50,8 @@ let listaEquipos = [];
 //Crear lista de Prestamos
 let listaPrestamos= [];
 
+let listaDevoluciones = [];
+
 
 
 inputTrabajador = document.getElementById("inputTrabajador");
@@ -61,15 +63,18 @@ cajaPrestamos = document.getElementById("cajaPrestamos");
 ContenidoTabla = document.getElementById('ContenidoTabla');
 
 
-crearTrabajadoresEjemplo(listaTrabajadores).then(() => {
-    
-    crearEquiposEjemplo(listaEquipos).then(() => {
+crearListaDevoluciones(listaDevoluciones).then(() => {
 
-        ListaPrestamos(listaPrestamos, listaEquipos).then(() => {
-            console.log(listaEquipos);
-            console.log(listaTrabajadores);
-            console.log(listaPrestamos);
-            agregarContenidoPrestamos(listaPrestamos, cajaPrestamos);
+    crearTrabajadoresEjemplo(listaTrabajadores).then(() => {
+    
+        crearEquiposEjemplo(listaEquipos).then(() => {
+    
+            ListaPrestamos(listaPrestamos, listaEquipos).then(() => {
+                console.log(listaEquipos);
+                console.log(listaTrabajadores);
+                console.log(listaPrestamos);
+                agregarContenidoPrestamos(listaPrestamos, cajaPrestamos, listaDevoluciones);
+            });
         });
     });
 });
@@ -141,20 +146,35 @@ function agregarContenidoTrabajadores(ListaObjetos, destino) {
     }
 }
 
-function agregarContenidoPrestamos(ListaObjetos, destino) {
+function agregarContenidoPrestamos(ListaObjetos, destino, listaDevoluciones) {
+    console.log(listaDevoluciones);
+    // Recorrer la lista de objetos de préstamos
     for (let i = 0; i < ListaObjetos.length; i++) {
+        const prestamo = ListaObjetos[i];
+
+        // Verificar si el id del préstamo está en la lista de devoluciones
+        if (listaDevoluciones.includes(prestamo.id)) {
+            continue; // Si el id está en listaDevoluciones, saltar a la siguiente iteración
+        }
+
+        // Crear una nueva opción
         var option = document.createElement('option');
-        option.value = ListaObjetos[i].id;
+        option.value = prestamo.id;
+
+        // Buscar el nombre del trabajador solicitante
         for (let j = 0; j < listaTrabajadores.length; j++) {
-            const element = listaTrabajadores[j];
-            if (element.id == ListaObjetos[i].trabajadorSolicitante) {
-                option.textContent = element.nombre;
+            const trabajador = listaTrabajadores[j];
+            if (trabajador.id == prestamo.trabajadorSolicitante) {
+                option.textContent = trabajador.nombre;
+                break; // Salir del bucle una vez encontrado el trabajador
             }
         }
 
+        // Agregar la opción al destino
         destino.appendChild(option);
     }
 }
+
 
 function verSeleccionados(caja) {
     let selected = [];
@@ -187,7 +207,7 @@ function CrearDevolucion() {
     var dia = fechaActual.getDate();
     var mes = fechaActual.getMonth() + 1; // Los meses comienzan en 0
     var anio = fechaActual.getFullYear();
-    var fechaFormateada = dia + '/' + mes + '/' + anio;
+    var fechaFormateada = anio + '-' + mes + '-' + dia;
 
     var prestamo;
 
@@ -216,10 +236,11 @@ if (estadoEquipo && InputObservaciones && prestamo) {
      );
 
      let estadoEquipoJson = JSON.stringify(estadoEquipo);
+     console.log(devolucion.prestamoDevuelto);
 
         $.ajax({
             data: {
-                fechaDevolucion: devolucion.fechaDevolucion,
+                fechaDevolucion: fechaFormateada,
                 estadoEquipo: estadoEquipoJson,
                 observaciones: devolucion.observaciones,
                 prestamoDevuelto: devolucion.prestamoDevuelto
@@ -232,6 +253,7 @@ if (estadoEquipo && InputObservaciones && prestamo) {
             },
             success: function (mensaje) {
                 alert(mensaje);
+                console.log(mensaje);
             },
             error: function (jqXHR, status, error) {
                 console.log("Fail: " + error.message);
@@ -268,6 +290,32 @@ function crearEquiposEjemplo(lista) {
                         data[i].estado // estado
                     );
                     lista.push(equipo);
+                }
+                resolve();  // Resolver la promesa
+            },
+            error: function (jqXHR, status, error) {
+                console.log("Error: " + error);
+                reject(error);  // Rechazar la promesa en caso de error
+            }
+        });
+    });
+}
+
+// Función para crear equipos de ejemplo y agregarlos a la lista
+function crearListaDevoluciones(lista) {
+    return new Promise((resolve, reject) => {
+        var params = {
+            "postulado": "selectedOption"
+        }
+
+        $.ajax({
+            data: params,
+            url: "php/listaDevoluciones.php",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                for (let i = 0; i < data.length; i++) {
+                    lista.push(data[i].idPrestamo);
                 }
                 resolve();  // Resolver la promesa
             },
