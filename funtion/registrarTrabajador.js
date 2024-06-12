@@ -15,7 +15,11 @@ cargo = document.getElementById("cargo");
 departamento = document.getElementById("departamento");
 btnCrear = document.getElementById("btnCrear");
 
-btnCrear.addEventListener("click", CrearTrabajador)
+document.getElementById('btnRegresar').addEventListener('click', function () {
+    history.back(); // Regresar a la página anterior en el historial del navegador
+});
+
+btnCrear.addEventListener("click", (CrearTrabajador));
 
 function CrearTrabajador() {
 
@@ -36,7 +40,23 @@ function CrearTrabajador() {
             Inputdepartamento // departamento
         );
     
-        console.log(trabajador);
+        //console.log(trabajador);
+
+        $.ajax({
+            data: trabajador,
+            url: "php/insertTrabajador.php",
+            type: "POST",
+  
+            beforesend: function(){
+  
+            },
+            success: function(mensaje){
+              alert(mensaje);
+            },
+            error: function(jqXHR, status, error){
+              console.log("Fail: " + error.message);
+            }});
+
     } else {
         alert("Rellene todos los campos")
     }

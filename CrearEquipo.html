@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <title>La Minita</title>
     <script src="https://kit.fontawesome.com/badd522a95.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,8 +24,6 @@
                 <a href="#"> <i class="fa-solid fa-file-lines"></i> Informes</a>
                 <a href="registrarUsuario.html"> <i class="fa-solid fa-id-card"></i> Registrar Usuario</a>
                 <a href="registrarTrabajador.html"> <i class="fa-solid fa-id-card"></i> Registrar Trabajador</a>
-                <a href="eliminarEquipo.html"> <i class="fa-solid fa-id-card"></i>Eliminar Equipos</a>
-                <a href="CrearEquipo.html"> <i class="fa-solid fa-id-card"></i>crear Equipos</a>
             </nav>
         </div>
     </div>
@@ -48,6 +49,11 @@
                                 placeholder="Ingresa la Descripción del Equipo.."></textarea>
                         </div>
 
+                        <div class="ContainerDescripcionEquipos">
+                            <textarea name="CaracteristicasEquipo" id="CaracteristicasEquipos"
+                                placeholder="Ingresa las caracteristicas tecnicas del Equipo.."></textarea>
+                        </div>
+
                         <div class="combobox-container">
                             <p>Seleccione el estado del equipo:</p>
                             <select id="options" class="combobox">
@@ -60,12 +66,12 @@
 
                         <div class="input-field">
                             <label id="icon" for="Ubicación"><i class="fa-solid fa-location-dot"></i></label>
-                            <input type="text" id="Ubicación" placeholder="Ubicación Equipo">
+                            <input type="text" id="Ubicacion" placeholder="Ubicación Equipo">
                         </div>
 
                         <div class="BotonesCrearEquipo">
-                            <input class="BotonesCrear" type="button" value="Crear">
-                            <input class="BotonesCrear" type="button" value="Regresar">
+                            <input class="BotonesCrear" type="button" value="Crear" id="btnCrear">
+                            <input class="BotonesCrear" type="button" value="Regresar" id="btnRegresar">
 
                         </div>
                     </div>
@@ -73,7 +79,7 @@
             </div>
         </div>
     </main>
-
+    <script src="funtion/CrearEquipo.js"></script>
 </body>
 
 </html>

@@ -46,18 +46,20 @@ cajaTrabajador = document.getElementById("cajaTrabajador");
 
 // Lista para almacenar los trabajadores
 let listaTrabajadores = [];
-crearTrabajadoresEjemplo(listaTrabajadores);
 
 let idTrabajadorSeleccionado;
 
 let listaEquipos = [];
-crearEquiposEjemplo(listaEquipos);
+// Llamada para crear los equipos de ejemplo y luego agregar el contenido
+crearEquiposEjemplo(listaEquipos).then(() => {
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    agregarContenidoTrabajadores(listaTrabajadores, cajaTrabajador);
-    agregarContenidoEquiposDisponibles(listaEquipos, cajaBuscador);
-    console.log(listaEquipos);
+    crearTrabajadoresEjemplo(listaTrabajadores).then(() => {
+        agregarContenidoEquiposDisponibles(listaEquipos, cajaBuscador);
+        agregarContenidoTrabajadores(listaTrabajadores, cajaTrabajador);
+    });
+
 });
+
 
 document.getElementById("equiposDisponibles").addEventListener("keyup", () => buscadorEquiposDisponibles(equiposDisponibles, cajaBuscador));
 document.getElementById("trabajadorPrestar").addEventListener("keyup", () => buscadorEquiposDisponibles(trabajadorPrestar, cajaTrabajador));
@@ -143,7 +145,7 @@ function verSeleccionados(caja) {
             selected.push(caja.options[i].value);
         }
     }
-    
+
     return selected;
 
 }
@@ -160,9 +162,9 @@ function verListaObjetos(caja, lista) {
             if (lista[i].id == selected[j]) {
                 listaObjetos.push(lista[i]);
             }
-            
+
         }
-        
+
     }
 
     return listaObjetos;
@@ -185,88 +187,122 @@ function agregarSeleccionados(lista, listaSeleccionados, destino) {
 function CrearPrestamo() {
 
     // Obtener la fecha actual
-var fechaActual = new Date();
-var dia = fechaActual.getDate();
-var mes = fechaActual.getMonth() + 1; // Los meses comienzan en 0
-var anio = fechaActual.getFullYear();
-var fechaFormateada = dia + '/' + mes + '/' + anio;
+    var fechaActual = new Date();
+    var dia = fechaActual.getDate();
+    var mes = fechaActual.getMonth() + 1; // Los meses comienzan en 0
+    var anio = fechaActual.getFullYear();
+    var fechaFormateada = anio + '-' + mes + '-' + dia;
 
-// Obtener los demás valores
-var fechaEntrega = document.getElementById("fechaEntrega").value;
-var listaCajaPrestar = verListaObjetos(cajaPrestar, listaEquipos);
+    // Obtener los demás valores
+    var fechaEntrega = document.getElementById("fechaEntrega").value;
+    var listaCajaPrestar = verListaObjetos(cajaPrestar, listaEquipos);
 
-// Verificar si los valores son nulos
-if (idTrabajadorSeleccionado && fechaEntrega && listaCajaPrestar) {
-    // Crear el objeto Prestamo solo si los valores no son nulos
-    let prestamo = new Prestamo(
-        1,
-        fechaFormateada,
-        idTrabajadorSeleccionado,
-        fechaEntrega,
-        listaCajaPrestar
-    );
+    // Verificar si los valores son nulos
+    if (idTrabajadorSeleccionado && fechaEntrega && listaCajaPrestar) {
+        // Crear el objeto Prestamo solo si los valores no son nulos
+        let prestamo = new Prestamo(
+            1,
+            fechaFormateada,
+            idTrabajadorSeleccionado,
+            fechaEntrega,
+            listaCajaPrestar
+        );
 
-    for (let i = 0; i < listaCajaPrestar.length; i++) {
-        const element = listaCajaPrestar[i];
-        alert(`nombre: ${element.nombre} Ubicación: ${element.ubicacionBodega}`);   
+        let equipoPrestadoJson = JSON.stringify(listaCajaPrestar);
+
+        $.ajax({
+            data: {
+                fechaPrestamo: prestamo.fechaPrestamo,
+                trabajadorSolicitante: prestamo.trabajadorSolicitante,
+                fechaDevolucionEstimada: prestamo.fechaDevolucionEstimada,
+                equipoPrestado: equipoPrestadoJson
+            },
+            url: "php/insertPrestamo.php",
+            type: "POST",
+
+            beforesend: function () {
+
+            },
+            success: function (mensaje) {
+                alert(mensaje);
+            },
+            error: function (jqXHR, status, error) {
+                console.log("Fail: " + error.message);
+            }
+        });
+
+        console.log(prestamo);
+    } else {
+        // Lanzar un alert si alguno de los valores es nulo
+        alert("Por favor, complete todos los campos antes de proceder.");
     }
-
-    for (let i = 0; i < prestamo.equipoPrestado.length; i++) {
-        console.log(prestamo.equipoPrestado[i].id);   
-    }
-
-    console.log(prestamo);
-} else {
-    // Lanzar un alert si alguno de los valores es nulo
-    alert("Por favor, complete todos los campos antes de proceder.");
-}
 
 }
 
 // Función para crear trabajadores de ejemplo y agregarlos a la lista
 function crearTrabajadoresEjemplo(lista) {
-    const nombres = ["Juan", "Maria", "Pedro", "Ana", "Luis", "Carlos", "Laura", "Fernando", "Jose", "Marta", "Lucia", "Sofia", "Miguel", "Ana", "Juan"];
-    const apellidos = ["Perez", "Garcia", "Lopez", "Martinez", "Gonzalez", "Hernandez", "Ramirez", "Fernandez", "Sanchez", "Torres", "Dominguez", "Vargas", "Castro", "Diaz", "Morales"];
-    const cargos = ["Gerente", "Supervisor", "Analista", "Desarrollador", "Diseñador", "Tester", "Administrador", "Consultor", "Ingeniero", "Especialista", "Operador", "Coordinador", "Lider de equipo", "Asistente", "Arquitecto"];
-    const departamentos = ["Ventas", "Recursos Humanos", "TI", "Marketing", "Finanzas", "Legal", "Operaciones", "Logística", "Atención al Cliente", "Calidad", "Investigación", "Producción", "Soporte", "Proyectos", "Compras"];
+    return new Promise((resolve, reject) => {
+        var params = {
+            "postulado": "selectedOption"
+        }
 
-    for (let i = 0; i < nombres.length; i++) {
-        let trabajador = new Trabajador(
-            i + 1, // id
-            nombres[i], // nombre
-            apellidos[i], // apellido
-            cargos[i], // cargo
-            departamentos[i] // departamento
-        );
-        lista.push(trabajador);
-    }
+        $.ajax({
+            data: params,
+            url: "php/listaTrabajadores.php",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                for (let i = 0; i < data.length; i++) {
+                    let trabajador = new Trabajador(
+                        data[i].idTrabajador, // id
+                        data[i].nombre, // nombre
+                        data[i].apellido, // apellido
+                        data[i].cargo, // cargo
+                        data[i].departamento // departamento
+                    );
+                    lista.push(trabajador);
+                }
 
-    return lista;
+                resolve();  // Resolver la promesa
+            },
+            error: function (jqXHR, status, error) {
+                console.log("Error: " + error);
+                reject(error);  // Rechazar la promesa en caso de error
+            }
+        });
+    });
 }
 
 // Función para crear equipos de ejemplo y agregarlos a la lista
 function crearEquiposEjemplo(lista) {
-    const nombres = ["Impresora", "Scanner", "Laptop", "Monitor", "Teclado", "Mouse", "Router", "Switch", "Servidor", "Proyector"];
-    const descripciones = [
-        "Impresora láser color", "Scanner de alta resolución", "Laptop de 15 pulgadas", "Monitor 4K", "Teclado mecánico",
-        "Mouse inalámbrico", "Router de alta velocidad", "Switch de 24 puertos", "Servidor dedicado", "Proyector HD"
-    ];
-    const caracteristicasTecnicas = [
-        "Impresión rápida, dúplex", "Resolución 4800 dpi", "Intel i7, 16GB RAM, 512GB SSD", "3840x2160, HDR", "Cherry MX Blue switches",
-        "Sensor óptico, 16000 DPI", "802.11ac, doble banda", "Gigabit Ethernet", "Xeon, 32GB RAM, 2TB HDD", "1080p, 3000 lúmenes"
-    ];
-    const ubicaciones = ["Bodega A", "Bodega B", "Bodega C", "Bodega D", "Bodega E", "Bodega F", "Bodega G", "Bodega H", "Bodega I", "Bodega J"];
-    const estados = ["Disponible", "En uso", "En reparación", "Mantenimiento", "Fuera de servicio"];
+    return new Promise((resolve, reject) => {
+        var params = {
+            "postulado": "selectedOption"
+        }
 
-    for (let i = 0; i < 10; i++) {
-        let equipo = new Equipo(
-            i + 1, // id
-            nombres[i], // nombre
-            descripciones[i], // descripcion
-            caracteristicasTecnicas[i], // caracteristicasTecnicas
-            ubicaciones[i], // ubicacionBodega
-            estados[i % (estados.length-2)] // estado (cíclico para tener variedad)
-        );
-        lista.push(equipo);
-    }
+        $.ajax({
+            data: params,
+            url: "php/listaEquipos.php",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                for (let i = 0; i < data.length; i++) {
+                    let equipo = new Equipo(
+                        data[i].idEquipo, // id
+                        data[i].nombre, // nombre
+                        data[i].descripcion, // descripcion
+                        data[i].caracteristicasTecnicas, // caracteristicasTecnicas
+                        data[i].ubicacionBodega, // ubicacionBodega
+                        data[i].estado // estado
+                    );
+                    lista.push(equipo);
+                }
+                resolve();  // Resolver la promesa
+            },
+            error: function (jqXHR, status, error) {
+                console.log("Error: " + error);
+                reject(error);  // Rechazar la promesa en caso de error
+            }
+        });
+    });
 }
