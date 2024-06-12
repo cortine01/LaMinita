@@ -17,65 +17,63 @@
                 <img src="src/MinitaLogo.png" id="MinitaLogo" alt="Logo">
                 <a href="index.html"> <i class="fa-solid fa-book"></i> Catálogo</a>
                 <a href="prestado.html"> <i class="fa-solid fa-toolbox"></i> Prestamos</a>
-                <a href="Devoluciones.html"> <i class="fa-solid fa-backward"></i> Devoluciones</a>
+                <a href="devoluciones.html"> <i class="fa-solid fa-backward"></i> Devoluciones</a>
                 <a href="#"> <i class="fa-solid fa-file-lines"></i> Informes</a>
                 <a href="registrarUsuario.html"> <i class="fa-solid fa-id-card"></i> Registrar Usuario</a>
                 <a href="registrarTrabajador.html"> <i class="fa-solid fa-id-card"></i> Registrar Trabajador</a>
                 <a href="eliminarEquipo.html"> <i class="fa-solid fa-id-card"></i>Eliminar Equipos</a>
-
+                <a href="CrearEquipo.html"> <i class="fa-solid fa-id-card"></i>crear Equipos</a>
             </nav>
         </div>
-
     </div>
 
     <main class="main-content">
 
+        <div class="containerCrearEquipo">
 
-        <div class="containerRegistrarTrabajador">
-
-            <div class="form-content">
+            <div class="form-contentCrearEquipo">
                 <h1 id="title">
-                    Registrar Usuario
+                    Crear Equipo
                 </h1>
 
                 <form id="form">
-                    <div class="textContainer">
+                    <div class="ContainerCrearEquipo">
                         <div class="input-field">
                             <label id="icon" for="nombre"><i class="fa-regular fa-user"></i></i></label>
-                            <input type="text" id="nombre" placeholder="Nombre">
+                            <input type="text" id="nombre" placeholder="Nombre Equipo">
+                        </div>
+
+                        <div class="ContainerDescripcionEquipos">
+                            <textarea name="DescripcionEquipo" id="DescripcionEquipos"
+                                placeholder="Ingresa la Descripción del Equipo.."></textarea>
+                        </div>
+
+                        <div class="combobox-container">
+                            <p>Seleccione el estado del equipo:</p>
+                            <select id="options" class="combobox">
+                                <option value="Disponible">Disponible</option>
+                                <option value="Prestado">Prestado</option>
+                                <option value="Perdido">Perdido</option>
+                                <option value="Dañado">Dañado</option>
+                            </select>
                         </div>
 
                         <div class="input-field">
-                            <label id="icon" for="apellido"><i class="fa-regular fa-user"></i></label>
-                            <input type="text" id="apellido" placeholder="Apellido">
+                            <label id="icon" for="Ubicación"><i class="fa-solid fa-location-dot"></i></label>
+                            <input type="text" id="Ubicación" placeholder="Ubicación Equipo">
                         </div>
 
-                        <div class="input-field">
-                            <label id="icon" for="cargo"><i class="fa-solid fa-briefcase"></i></label>
-                            <input type="text" id="cargo" placeholder="Cargo">
-                        </div>
+                        <div class="BotonesCrearEquipo">
+                            <input class="BotonesCrear" type="button" value="Crear">
+                            <input class="BotonesCrear" type="button" value="Regresar">
 
-                        <div class="input-field">
-                            <label id="icon" for="email"><i class="fa-regular fa-envelope"></i></label>
-                            <input type="email" id="email" placeholder="Email">
                         </div>
-
-                        <div class="input-field">
-                            <label for="password"><i class="fa-solid fa-lock"></i></label>
-                            <input type="password" id="password" placeholder="Contraseña">
-                        </div>
-
-                        <div class="BotonesRegistrarTrabajador">
-                            <input class="BotonesRegistrarT" type="button" value="Crear">
-                            <input class="BotonesRegistrarT" type="button" value="Regresar">
-                        </div>
-
                     </div>
                 </form>
             </div>
         </div>
     </main>
-    <script src="funtion/main.js"></script>
+
 </body>
 
 </html>

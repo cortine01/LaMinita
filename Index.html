@@ -22,22 +22,23 @@
                 <a href="registrarUsuario.html"> <i class="fa-solid fa-id-card"></i> Registrar Usuario</a>
                 <a href="registrarTrabajador.html"> <i class="fa-solid fa-id-card"></i> Registrar Trabajador</a>
                 <a href="eliminarEquipo.html"> <i class="fa-solid fa-id-card"></i>Eliminar Equipos</a>
-               
-
+                <a href="CrearEquipo.html"> <i class="fa-solid fa-id-card"></i>crear Equipos</a>
+                <a href="EditarEquipo.html"> <i class="fa-solid fa-id-card"></i>Editar Equipos</a>
             </nav>
         </div>
     </div>
 
     <main class="main-content">
         <!-- Search -->
-        <section class="search">
-            <form class="buscador">
-                <input class="textoBuscador" type="text" name="query" id="query" placeholder="Busca un equipo" />
-                <input class="botonBuscador" type="button" value="Buscar">
-            </form>
-        </section>
+        <div class="search">
+            <div class="table_header">
+                <input class="botonBuscador" type="button" value="Crear Equipo">
+                <div class="textoBuscador">
+                    <input type="text" name="query" id="query" placeholder="Busca un equipo" />
+                    <i class="fa-solid fa-magnifying-glass" id="search"></i>
+                </div>
+            </div>
 
-        <section class="table-container">
             <table>
                 <thead>
                     <tr>
@@ -122,13 +123,8 @@
                     </tr>
                 </tbody>
             </table>
-            <input class="botonCrearEquipo" type="button" value="Crear Equipo">
-        </section>
-        <section class="paginas">
-            <input type="button" value="<">
-            <p>1/1</p>
-            <input type="button" value=">">
-        </section>
+
+        </div>
     </main>
 
 </body>

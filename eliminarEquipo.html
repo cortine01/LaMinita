@@ -22,7 +22,7 @@
                 <a href="registrarUsuario.html"> <i class="fa-solid fa-id-card"></i> Registrar Usuario</a>
                 <a href="registrarTrabajador.html"> <i class="fa-solid fa-id-card"></i> Registrar Trabajador</a>
                 <a href="eliminarEquipo.html"> <i class="fa-solid fa-id-card"></i>Eliminar Equipos</a>
-               
+
             </nav>
         </div>
 
@@ -31,84 +31,42 @@
     <main class="main-content">
 
 
-        <section class="eliminarEquipo">
-            <div class="eliminarEquipo-titulo">
-                <h2>
-                    ELIMINAR EQUIPO
-                </h2>
-                <h2>
-                    Nombre
-                </h2>
-            </div>
+        <div class="containerCrearEquipo">
 
-            <div class="buscadores">
-                <div class="Buscador-containes1">
-                    <input type="text" name="eliminarEquipo" id="eliminarEquipo" placeholder="Ingresa Nombre..">
-                </div>
+            <div class="form-contentCrearEquipo">
+                <h1 id="title">
+                    Eliminar Equipo
+                </h1>
+                
 
+                <form id="form">
+                    <div class="ContainerCrearEquipo">
 
-                <h2>
-                    Apellido
-                </h2>
-                <div class="Buscador-containes2">
-                    <input type="text" name="eliminarEquipo" id="eliminarEquipo" placeholder="Ingresa Apellido..">
-                </div>
+                        <h4>
+                            Nombre del administrador
+                        </h4>
+                        <h4>
+                            Nombre del equipo
+                        </h4>
 
 
-                <div>
-                    <h2>Observaciones</h2>
-                    <div class="Buscador-containes3">
-                        <textarea name="eliminarEquipo" id="eliminarEquipo" placeholder="Ingresa las Observaciones.."></textarea>
+
+                        <div class="ContainerDescripcionEquipos">
+                            <textarea name="DescripcionEquipo" id="DescripcionEquipos"
+                                placeholder="Ingresa las observaciones.."></textarea>
+                        </div>
+
+
+                        <div class="BotonesCrearEquipo">
+                            <input class="BotonesCrear" type="button" value="Eliminar">
+                            <input class="BotonesCrear" type="button" value="Regresar">
+
+                        </div>
                     </div>
-                </div>
-
-
-
-
-
-
-                <!--BOTONES-->
-
-                <style>
-                    #eliminarEquipo {
-                        width: 100%;
-                        padding: 10px;
-                        font-size: 16px;
-                        border: 1px solid #030303;
-                        border-radius: 20px;
-                        margin-right: 20px;
-                        box-sizing: border-box;
-                        background-color: #ffffff;
-                        margin-bottom: 10px;
-
-                    }
-
-                    .BtnEliminarEquipo {
-                        background-color: #34495E;
-                        color: #ffffff;
-                        padding: 15px 30px;
-                        font-size: 18px;
-                        font-weight: bold;
-                        border-radius: 50px;
-                        border: none;
-                        cursor: pointer;
-                        margin: 20px 15px 30px 15px;
-                        transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-                        display: inline-block;
-                    }
-
-                    .BtnEliminarEquipo:hover {
-                        background-color: #667070;
-                        transform: scale(1.1);
-                        box-shadow: 0 8px 16px;
-                    }
-                </style>
-
-
-                <input class="BtnEliminarEquipo" type="button" value="Eliminar">
-                <input class="BtnEliminarEquipo" type="button" value="Regresar">
-
+                </form>
             </div>
+        </div>
+
 
     </main>
     <script src="funtion/main.js"></script>
