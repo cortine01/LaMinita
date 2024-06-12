@@ -202,7 +202,7 @@ body {
     border-spacing: 0;
     margin-top: 1rem;
     margin-top: 20px;
-    width: 75%;
+    width: 100%;
     border-collapse: collapse;
 
 }
@@ -634,11 +634,11 @@ td {
 }
 
 .Buscador-prestamos {
-    width: 400px;
+    width: 500px;
+    height: 100%;
     padding: 20px;
     display: block;
     justify-content: space-between;
-    height: 290px;
     background-color: grey;
     margin-bottom: 20px;
     border-radius: 20px;

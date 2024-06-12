@@ -40,7 +40,7 @@ equiposDisponibles = document.getElementById("equiposDisponibles");
 cajaBuscador = document.getElementById("cajaBuscador");
 
 trabajadorPrestar = document.getElementById("trabajadorPrestar");
-cajaPrestar = document.getElementById("cajaPrestar");
+cajaPrestar = document.getElementById("cajaBorrarSeleccionado");
 
 cajaTrabajador = document.getElementById("cajaTrabajador");
 
